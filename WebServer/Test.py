@@ -1,5 +1,6 @@
 # flask for web app.
 import flask as fl
+from flask import request, jsonify 
 # numpy for numerical work.
 import numpy as np
 import random
@@ -13,19 +14,10 @@ def home():
     #return "Hello, World!"
     return app.send_static_file('index.html')
 
-# Add uniform route.
-@app.route('/api/uniform')
-def uniform():
-    return{"value":np.random.uniform()}
-
-# Add normal route.
-@app.route('/api/normal')
-def normal():
-    return{"value":np.random.normal()}
-
-
 # Add normal route.
 @app.route('/api/windspeed')
 def windspeed():
-    value = random.randint(0, 25)
-    return{"value":value}
+    #value = request.form['input']
+    #value = random.randint(0, 25)
+    value = request.form["input"]
+    return{"value":value} 
