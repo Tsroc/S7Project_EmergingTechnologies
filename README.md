@@ -1,7 +1,11 @@
 # S7Project_EmergingTechnologies-
 
-set FLASK_APP=webserver.py  
-python -m flask run  
+### Windows
+start-server.bat
 
-docker build . -t webserver .  
-docker run -d -p 5000:5000 webserver  
+### Linux
+sh start-server.sh
+
+### Docker 
+docker build . -t web-server .
+docker run -d -p 5000:5000 webserver
