@@ -9,3 +9,7 @@ sh start-server.sh
 ### Docker 
 docker build . -t web-server .  
 docker run -d -p 5000:5000 webserver
+
+
+### Webservice
+Creates power produced from a user entered windspeed. Predictions are based on polynomial regression machine learning.
