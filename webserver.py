@@ -5,7 +5,7 @@ from TrainedModel import PolynomialRegression
 app = fl.Flask(__name__)
 
 # Create the model
-model = PolynomialRegression(2500, 3)
+model = PolynomialRegression(200, 3)
 model.LoadData("Windspeed.txt")
 model.CreateModel()
 
